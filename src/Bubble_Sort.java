@@ -2,7 +2,7 @@ public class Bubble_Sort {
     //Works on principle pushing the max to the last by adjacent swapping.
     //0-n-1,0-n-2,0-n-3...0-1
     // worst and average case = O(n^2)
-    // best case O(n)
+    // best case O(n) if array is already sorted
     public void sort(int []a){
 
         for(int i = 0;i<a.length;i++){
