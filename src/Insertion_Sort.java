@@ -19,9 +19,21 @@ public class Insertion_Sort {
         }
     }
 
+    public void recursiveInsertionSort(int[] a, int i, int n){
+        if(i == n) return;
+        int j = i;
+        while(j>=0 && a[j] >a[j+1]){
+            int temp = a[j+1];
+            a[j+1] = a[j];
+            a[j] = temp;
+            j--;
+        }
+        recursiveInsertionSort(a,i+1,n);
+    }
+
     static void main(String[] args) {
-        int []a = new int[]{6,5,4,3,2,1};
-        new Insertion_Sort().sort(a);
+        int []a = new int[]{6,5,4,3,999,2,1,-1,0,-2};
+        new Insertion_Sort().recursiveInsertionSort(a,0,a.length-1 );
         for(int i = 0;i<a.length;i++){
             System.out.print(a[i]+", ");
         }

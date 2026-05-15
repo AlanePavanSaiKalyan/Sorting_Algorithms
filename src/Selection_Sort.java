@@ -78,7 +78,7 @@ public class Selection_Sort {
     public void compareLexicographically(String []ele){
         for(int i= 0;i<ele.length-1;i++){
             int min  = i;
-            for(int j = i+1;j<ele.length;j++){
+            for(int j = i+1;j<ele.length;j++){//we take j = i+1 so we have to take i<n-1
                 if(ele[min].compareToIgnoreCase(ele[j]) > 0){min = j;
                 }
             }

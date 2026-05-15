@@ -19,6 +19,7 @@ public class MergeSort_DivideAndConquer {
             if(a[left]<a[right]){
                 res.add(a[left]);
                 left++;
+
             }
             else{
                 res.add(a[right]);

@@ -21,9 +21,24 @@ public class Bubble_Sort {
         }
     }
 
+    public void recursiveBubbleSort(int []a ,int end){
+        if(end == 1) return;
+        boolean swapped = false;
+        for(int j = 0;j<end-1;j++){
+            if(a[j]>a[j+1]){
+                int temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+                swapped = true;
+            }
+        }
+        if(!swapped) return;
+        recursiveBubbleSort(a,end-1);
+    }
+
    public static void main(String[] args) {
-        int a[] = new int[]{45,4,32,6,745,1};
-        new Bubble_Sort().sort(a);
+        int a[] = new int[]{45,4,32,6,745,1,-1,0,2};
+        new Bubble_Sort().recursiveBubbleSort(a, a.length);
         for(int i = 0;i<a.length ;i++){
             System.out.print(a[i]+", ");
         }
